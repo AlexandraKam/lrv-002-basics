@@ -12,7 +12,7 @@ class ToDoController extends Controller
      */
     public function index()
     {
-        $todo = ToDo::all();
+        $todo = ToDo::paginate();
         return view('todo.index', ['todo' => $todo]);
     }
 
